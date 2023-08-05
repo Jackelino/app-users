@@ -7,21 +7,22 @@ const INITIAL_STATE = {
     password: ''
 }
 export default function UserForm() {
+    // DATA
     const [form, setForm] = useState(INITIAL_STATE);
     const {username, email, password} = form;
+
+    // METHODS
     const onInputChange = ({target}) => {
         const {name, value} = target;
         setForm(
-            {
-                ...form,
-                [name]: value
-            }
+            {...form, [name]: value}
         );
     }
+
     const submit = (event) => {
         event.preventDefault();
         console.log(form)
-        setForm(INITIAL_STATE)
+        setForm(INITIAL_STATE);
     }
     return (
         <Stack

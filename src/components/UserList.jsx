@@ -3,10 +3,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import Grid from '@mui/material/Grid';
 import User from "./User.jsx";
-import {useState} from "react";
 
 export default function UserList({data}) {
-    const [users, setUsers] = useState([...data]);
+    const users = data;
     return (
         <>
             <h1>User List</h1>

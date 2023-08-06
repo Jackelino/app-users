@@ -1,0 +1,11 @@
+.header {
+    @apply p-4
+}
+
+.ul {
+    @apply flex justify-between items-center align-middle text-green-500
+}
+
+.li {
+    @apply uppercase hover:text-green-800 hover:font-bold
+}

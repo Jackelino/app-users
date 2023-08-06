@@ -1,5 +1,4 @@
 import UserList from "../components/UserList.jsx";
-import {Container} from "@mui/material";
 import {useReducer} from "react";
 import {usersReducer} from "../reducers/usersReducer.js";
 
@@ -16,8 +15,6 @@ export default function Home() {
     const [data, dispatch] = useReducer(usersReducer, INITIAL_STATE);
     console.log(data)
     return (
-        <Container>
             <UserList data={data}/>
-        </Container>
     )
 }

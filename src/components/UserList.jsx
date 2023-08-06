@@ -1,7 +1,3 @@
-import {Divider, List, ListItem} from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import Grid from '@mui/material/Grid';
 import User from "./User.jsx";
 
 export default function UserList({data}) {
@@ -9,23 +5,16 @@ export default function UserList({data}) {
     return (
         <>
             <h1>User List</h1>
-            <List sx={{width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
+            <ul>
                 {
                     users.map((user) => (
-                            <>
-                                <ListItem key={user.id} alignItems="flex-start" secondaryAction={
-                                    <Grid item xs={8}>
-                                        <DeleteIcon/>
-                                        <DeleteForeverIcon/>
-                                    </Grid>}>
-                                    <User user={user}/>
-                                </ListItem>
-                                <Divider variant="inset" component="li"></Divider>
-                            </>
+                            <li key={user.id}>
+                                <User user={user}/>
+                            </li>
                         )
                     )
                 }
-            </List>
+            </ul>
         </>
     );
 }

@@ -1,5 +1,4 @@
-import {Button, Stack, TextField} from "@mui/material";
-import {useState} from "react";
+import {useState} from 'react';
 
 const INITIAL_STATE = {
     username: '',
@@ -25,27 +24,19 @@ export default function UserForm() {
         setForm(INITIAL_STATE);
     }
     return (
-        <Stack
-            component="form"
-            sx={{
-                width: 'auto',
-            }}
-            spacing={2}
-            noValidate
-            autoComplete="off"
-        >
-            <TextField id="filled-username" label="Username" name="username" required error={false} variant="filled"
-                       type="text"
-                       value={username}
-                       onChange={onInputChange}/>
-            <TextField id="filled-emai" label="Email" name="email" required error={false} variant="filled" type="email"
-                       value={email}
-                       onChange={onInputChange}/>
-            <TextField id="filled-password" label="Password" name="password" required error={false} variant="filled"
-                       type="password"
-                       value={password}
-                       onChange={onInputChange}/>
-            <Button variant="outlined" type="submit" onClick={submit}>Save</Button>
-        </Stack>
+        <form>
+            <input id="filled-username" name="username" required
+                   type="text"
+                   value={username}
+                   onChange={onInputChange}/>
+            <input id="filled-emai" name="email" required type="email"
+                   value={email}
+                   onChange={onInputChange}/>
+            <input id="filled-password" name="password"
+                   type="password"
+                   value={password}
+                   onChange={onInputChange}/>
+            <button type="submit" onClick={submit}>Save</button>
+        </form>
     )
 }

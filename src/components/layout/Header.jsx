@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
-import styles from '../../assets/css/layout/Header.module.css'
-import {useState} from "react";
+import styles from '../../assets/css/layout/Header.module.css';
+import {useState} from 'react';
 
 
 export function Header() {

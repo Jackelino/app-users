@@ -1,0 +1,14 @@
+.footer {
+    @apply p-4 flex justify-center items-center align-middle
+}
+
+.copyRight {
+    @apply text-gray-500
+}
+.name {
+    @apply text-gray-950
+}
+
+.source {
+    @apply mx-2 cursor-pointer text-green-500 transition duration-150 ease-out hover:text-green-800
+}

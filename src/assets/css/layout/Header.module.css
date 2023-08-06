@@ -3,9 +3,9 @@
 }
 
 .ul {
-    @apply flex justify-between items-center align-middle text-green-500
+    @apply flex justify-center items-center align-middle text-green-500
 }
 
 .li {
-    @apply uppercase hover:text-green-800 hover:font-bold
+    @apply  mx-2 uppercase transition duration-150 ease-out hover:text-green-800
 }

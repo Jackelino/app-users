@@ -1,3 +1,3 @@
 .main {
-    @apply p-4 min-h-screen flex justify-center align-middle
+    @apply container p-4 min-h-screen flex justify-center align-middle
 }

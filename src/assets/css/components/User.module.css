@@ -1,0 +1,16 @@
+.userArticle {
+    @apply p-3 flex items-center space-x-3 align-middle
+}
+.userAvatar {
+    @apply flex-none rounded-full bg-slate-100
+}
+.bodyArticle {
+
+}
+
+.userAction {
+    @apply grid grid-rows-2
+}
+.buttonAction {
+    @apply my-1 p-1 rounded-lg transition duration-150 ease-out hover:bg-green-50
+}

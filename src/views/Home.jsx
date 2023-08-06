@@ -8,14 +8,25 @@ const INITIAL_STATE = [
         username: 'jack',
         password: '32344',
         email: 'jack@gmail.com'
+    },
+    {
+        id: 2,
+        username: 'Juan',
+        password: '32344',
+        email: 'jack@gmail.com'
+    },
+    {
+        id: 3,
+        username: 'Raul',
+        password: '32344',
+        email: 'jack@gmail.com'
     }
-
 ]
 export default function Home() {
     const [data, dispatch] = useReducer(usersReducer, INITIAL_STATE);
     console.log(data)
     return (
-        <div className="text-3xl font-bold underline">
+        <div className="container p-1">
             <UserList data={data}/>
         </div>
 

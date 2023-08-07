@@ -2,5 +2,5 @@
     @apply backdrop-blur-sm bg-black/20 my-3 rounded-md border-2 border-b-green-500 drop-shadow-xl
 }
 .title {
-    @apply flex justify-center text-xl font-semibold
+    @apply flex justify-center text-xl font-semibold dark:text-white
 }

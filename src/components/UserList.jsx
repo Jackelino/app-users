@@ -4,7 +4,7 @@ export default function UserList({data}) {
     const users = data;
     return (
         <>
-            <h1 className={styles.title}>User List</h1>
+            <h1 className="flex justify-center text-xl font-semibold dark:text-white">User List</h1>
             <ul>
                 {
                     users.map((user) => (

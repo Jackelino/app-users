@@ -8,7 +8,7 @@ export default function UserList({data}) {
             <ul>
                 {
                     users.map((user) => (
-                            <li key={user.id} className={styles.usersList}>
+                            <li key={user.id} className=" my-3 rounded-md border-b-2 border-b-green-500 drop-shadow-xl dark:backdrop-blur-sm dark:bg-white/30 backdrop-blur-sm bg-white/50">
                                 <User user={user}/>
                             </li>
                         )

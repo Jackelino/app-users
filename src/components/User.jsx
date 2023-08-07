@@ -6,8 +6,8 @@ export default function User({user}) {
            <article className={styles.userArticle}>
                <img src="" alt="avatar" width="60" height="60" className={styles.userAvatar} />
                <div className={styles.bodyArticle}>
-                   <h2 className="font-semibold text-slate-900 truncate pr-20">{username}</h2>
-                   <small className="text-gray-700">{email}</small>
+                   <h2 className="font-semibold text-slate-900 truncate pr-20 dark:text-white">{username}</h2>
+                   <small className="text-gray-700 dark:text-gray-300">{email}</small>
                </div>
                <div className={styles.userAction}>
                    <button className={styles.buttonAction}>🖌</button>

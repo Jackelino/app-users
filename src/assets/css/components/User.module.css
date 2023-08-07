@@ -12,5 +12,5 @@
     @apply grid grid-rows-2
 }
 .buttonAction {
-    @apply my-1 p-1 rounded-lg transition duration-150 ease-out hover:bg-green-50
+    @apply my-1 p-1 rounded-lg transition duration-150 ease-out hover:bg-green-200 dark:hover:bg-green-50
 }

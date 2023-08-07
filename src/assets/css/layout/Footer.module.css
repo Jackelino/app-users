@@ -3,10 +3,10 @@
 }
 
 .copyRight {
-    @apply text-gray-500
+    @apply text-gray-500 dark:text-gray-300
 }
 .name {
-    @apply text-gray-950
+    @apply text-gray-950 dark:text-white
 }
 
 .source {

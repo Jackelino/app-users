@@ -1,0 +1,14 @@
+.userForm {
+    @apply container py-4 align-middle
+}
+
+.formGroup {
+
+}
+.inputForm {
+ @apply block py-2.5 px-0 w-full text-sm text-green-900 bg-white border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-600
+}
+
+.buttonAction {
+ @apply bg-green-700 text-white hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center
+}

@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import styles from '../../assets/css/layout/Header.module.css';
 import {useState} from 'react';
+import ThemeButton from "../ThemeButton.jsx";
 
 
 export function Header() {
@@ -24,6 +25,9 @@ export function Header() {
                         </li>
                     ))
                 }
+                <li className={styles.li}>
+                    <ThemeButton/>
+                </li>
             </ul>
         </header>
     )

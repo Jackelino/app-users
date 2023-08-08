@@ -10,7 +10,7 @@ const INITIAL_STATE = [
 ]
 export const useUserStore = create((set) => ({
         users: INITIAL_STATE,
-        addUser: () => set(),
-        removeUser: () => set()
+        addUser: ({user}) => set((state) => ({users: [...state.users, {...user, id: new Date().getTime()}]})),
+        removeUser: ({user}) => set((state) => ({users: state.users.filter((userState) => userState.id !== user.id)}))
     })
 );

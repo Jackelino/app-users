@@ -1,6 +1,14 @@
 import styles from '../assets/css/components/User.module.css'
+import {useUserStore} from "../stores/useUserStore.js";
 export default function User({user}) {
+    // DATA
     const {username, email} = user;
+    const {removeUser} = useUserStore();
+
+    // METHODS
+    const handleRemoveUser = ({user}) => {
+        removeUser({user});
+    }
     return (
         <>
            <article className={styles.userArticle}>
@@ -11,7 +19,7 @@ export default function User({user}) {
                </div>
                <div className={styles.userAction}>
                    <button className={styles.buttonAction}>🖌</button>
-                   <button className={styles.buttonAction}>❌</button>
+                   <button className={styles.buttonAction} onClick={()=> handleRemoveUser({user})}>❌</button>
                </div>
            </article >
         </>

@@ -3,6 +3,7 @@ import Home from "../views/Home.jsx";
 import About from "../views/About.jsx";
 import Base from "../layout/Base.jsx";
 import Create from "../views/Create.jsx";
+import Update from "../views/Update.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Create/>,
+            },
+            {
+                path: "/update/:userId",
+                element: <Update/>,
             },
         ],
     },

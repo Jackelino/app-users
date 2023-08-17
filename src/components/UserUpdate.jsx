@@ -1,31 +1,8 @@
 import styles from "../assets/css/components/UserForm.module.css";
-import {useState} from "react";
-import {useUserStore} from "../stores/useUserStore.js";
-import { useNavigate } from "react-router-dom";
+import {useUserForm} from "../hooks/useUserForm.js";
 
-const INITIAL_STATE = {
-    username: '',
-    email: '',
-}
 export default function UserUpdate({user}) {
-    // DATA
-    const [form, setForm] = useState({...user});
-    const {username, email} = form;
-    const {updateUser} = useUserStore();
-    const navigate = useNavigate();
-    // METHODS
-    const onInputChange = ({target}) => {
-        const {name, value} = target;
-        setForm(
-            {...form, [name]: value}
-        );
-    }
-
-    const submit = (event) => {
-        event.preventDefault();
-        updateUser({user: form});
-        navigate('/');
-    }
+    const {email, username, onInputChange, update} = useUserForm({state: user});
     return (
         <form className={styles.userForm}>
             <div className="relative z-0 w-full mb-6 group">
@@ -49,7 +26,7 @@ export default function UserUpdate({user}) {
             </div>
             <button type="submit"
                     className="bg-green-700 text-white hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
-                    onClick={submit}>Save
+                    onClick={update}>Save
             </button>
         </form>
     );
